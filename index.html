@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mario Run Run</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.mainMariobg{
+			background-image:url('https://www.desktopbackground.org/p/2014/08/24/814007_super-mario-backgrounds_1920x1200_h.png');
+			background-repeat:no-repeat ;
+			background-size:100% 100%;
+			width: 100vw;
+			height: 100vh;
+		}
+		.mario{
+			position: absolute;
+			bottom: 55px;
+			animation-name: mariorun;
+			animation-duration: 6s;
+			animation-iteration-count: infinite;
+			margin-left: 300px;
+			z-index: 10;
+		}
+		@keyframes mariorun {
+			0%{left: 0}
+			100%{left: 70%}
+		}
+		.monster{
+			position: absolute;
+			bottom: 55px;
+			animation-name: mariorun;
+			animation-duration: 6s;
+			animation-iteration-count: 5;
+		}
+		@media screen and (max-width:768px){
+			.mario{
+				width: 75px;
+				margin-left: 79px;
+			}
+			.monster{
+				width: 100px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="mainMariobg">
+		<div class="mario-runner">	
+			<img src="mario-running-gif.gif" class="mario" alt="Mario Gif" width="150px">
+			<img src="monster-gif.gif" class="monster" alt="" width="150px">
+		</div>
+	</div>	
+</body>
+</html>
